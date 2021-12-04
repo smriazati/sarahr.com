@@ -1,0 +1,70 @@
+$spacer: 1rem;
+
+$mobile-bp: 960px;
+$nav-bp: 960px;
+$collapse-bp: 960px;
+$small-bp: 640px;
+$xl-bp: 1300px;
+
+$container-width: 1280px;
+
+$grid-gap: 0px;
+$grid-column-count: 12;
+
+@mixin contained {
+  width: $container-width;
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $container-width) {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@mixin gridBasic {
+  display: grid;
+  grid-template-columns: repeat($grid-column-count, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: $grid-gap;
+}
+
+@mixin gridFixed {
+  @include contained;
+  @include gridBasic;
+}
+
+@mixin gridFixedNested {
+  @include contained;
+  @include gridBasic;
+
+  @media (max-width: $container-width) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@mixin gridFluid {
+  width: 100%;
+  width: 100vw;
+  display: grid;
+  @include gridBasic;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin stackedDivs {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+
+  >* {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+}

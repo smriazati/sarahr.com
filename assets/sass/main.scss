@@ -1,0 +1,118 @@
+@use 'system/_colors.scss'as *;
+@use 'system/_typography.scss'as *;
+@use 'system/_layout.scss'as *;
+@use 'system/_buttons.scss'as *;
+
+/* resets  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* colors  */
+
+/* typography */
+
+h1,
+.h1 {
+  @include h1Style();
+}
+
+h2,
+.h2 {
+  @include h2Style();
+}
+
+h3,
+.h3 {
+  @include h3Style();
+}
+
+h4,
+.h4 {
+  @include h4Style();
+}
+
+h5,
+.h5 {
+  @include h5Style();
+}
+
+h6,
+.h6 {
+  @include h3Style();
+}
+
+p,
+.p {
+  @include pStyle();
+}
+
+/* layouts */
+
+.contained {
+  @include contained;
+}
+
+.grid-basic {
+  @include gridBasic;
+}
+
+.grid-fixed {
+  @include gridFixed;
+}
+
+.grid-fixed-nested {
+  @include gridFixedNested;
+}
+
+.grid-fluid {
+  @include gridFluid;
+}
+
+.flex-center {
+  @include flexCenter;
+}
+
+.stacked-divs {
+  @include stackedDivs;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+
+  &.center {
+    justify-content: center
+  }
+}
+
+.flex-row {
+  display: flex;
+
+  &.center {
+    justify-content: center
+  }
+}
+
+/* pages */
+
+.page-container {
+  @include contained;
+}
