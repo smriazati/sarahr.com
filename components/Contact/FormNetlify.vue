@@ -39,19 +39,14 @@
     </div>
 
     <div v-if="message" class="form-group">
-      <label for="message" class="visually-hidden">Tell us about your project *</label>
-      <input name="message" id="message" placeholder="Tell us about your project *" v-model="messageInput"         :class="isMessageValid ? 'is-valid' : 'is-not-valid'"
- />
-    </div>
-
-    <div class="form-group">
-      <label for="link" class="visually-hidden">Website address and/or social link</label>
-      <input name="link" id="link" placeholder="Website address and/or social link" />
-    </div>
-
-    <div class="form-group">
-      <label for="referral" class="visually-hidden">How did you hear about us?</label>
-      <input name="referral" id="referral" placeholder="How did you hear about us?" />
+      <label for="message" class="visually-hidden">Message *</label>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Message *"
+        v-model="messageInput"
+        :class="isMessageValid ? 'is-valid' : 'is-not-valid'"
+      />
     </div>
 
     <div class="form-group" @click="onSubmitClick">

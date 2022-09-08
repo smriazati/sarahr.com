@@ -20,6 +20,17 @@ a {
   color: inherit;
 }
 
+a,
+.btn-link {
+  transition: .3s ease all;
+}
+
+.btn-link:hover,
+a:hover {
+  cursor: pointer;
+  color: rgb(202, 157, 218);
+}
+
 nav ul {
   padding: 0;
   list-style: none;
@@ -62,6 +73,19 @@ h6,
 p,
 .p {
   @include pStyle();
+}
+
+.display-style {
+  @include displayStyle;
+}
+.title-style {
+  @include titleStyle;
+}
+.text-style {
+  @include textStyle;
+}
+.large-text-style {
+  @include largeTextStyle;
 }
 
 /* layouts */
@@ -107,12 +131,94 @@ p,
   display: flex;
 
   &.center {
-    justify-content: center
+    justify-content: center;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.flex-row-reverse {
+    flex-direction: row-reverse;
   }
 }
 
-/* pages */
+.visually-hidden {
+  display: none;
+}
 
-.page-container {
-  @include contained;
+button {
+  outline: 0;
+  padding: .5rem;
+  border: 1px solid black;
+  border-radius: 0;
+  background: white;
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-plain {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.btn-primary {
+  @include btnPrimary;
+}
+
+
+.btn-secondary {
+  @include btnSecondary;
+}
+
+textarea,
+input {
+  outline: 0;
+  padding: .5rem;
+  border-radius: 0;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+}
+textarea {
+  height: 6rem;
+}
+
+.embed-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  height: 100%;
+  div {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #eaeaea;
+    }
+  }
+}
+
+.page-margin {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+form,
+.form-group + .form-group {
+  margin-top: 1rem;
+}
+
+.ul-plain { 
+  list-style: none;
 }

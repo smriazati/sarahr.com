@@ -1,6 +1,6 @@
 <template>
   <div class="layout-wrapper">
-    <div class="text-wrapper">
+    <div class="text-wrapper contained page-margin">
       <h1 v-if="error.statusCode === 404">This page doesn't exist</h1>
       <h1 v-else>An error occurred</h1>
       <p>

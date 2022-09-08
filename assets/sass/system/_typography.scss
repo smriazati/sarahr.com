@@ -1,8 +1,23 @@
-@mixin h1Style() {}
+@mixin h1Style() {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
 
-@mixin h2Style() {}
+@mixin h2Style() {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
 
-@mixin h3Style() {}
+@mixin h3Style() {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
 
 @mixin h4Style() {}
 
@@ -10,4 +25,40 @@
 
 @mixin h6Style() {}
 
-@mixin pStyle() {}
+@mixin pStyle() {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+@mixin displayStyle() {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 48px;
+}
+
+@mixin titleStyle() {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+@mixin smallTitleStyle() {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@mixin largeTextStyle() {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+@mixin textStyle() {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
