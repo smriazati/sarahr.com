@@ -12,7 +12,7 @@
   <script>
 export default {
   asyncData({ $axios }) {
-    const tableID = "tblgMrpbXDAKNBUNZ";
+    const tableID = "tblfxfdvDX7gMJJG8";
     return $axios
       .get(`/${tableID}?view=ItemsAPIView`)
       .then((res) => {
