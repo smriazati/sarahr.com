@@ -5,9 +5,9 @@
       <p>Thanks for contacting me! I'll be in touch very soon.</p>
       <ul>
         <li>
-          <nuxt-link to="/">Back to the about page</nuxt-link>
+          <nuxt-link to="/about">Back to the about page</nuxt-link>
         </li>
-        <li><nuxt-link to="/about">Go home</nuxt-link></li>
+        <li><nuxt-link to="/">Go home</nuxt-link></li>
       </ul>
     </div>
   </main>

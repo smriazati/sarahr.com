@@ -9,9 +9,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Sarah Riazati is a freelance front-end developer, video producer and motion graphic animation based in Durham, North Carolina.' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'og:image', property: 'og:image', content: '' },
+      { hid: 'og:image', property: 'og:image', content: '/media/og-image.png' },
       { hid: 'og:image:alt', property: 'og:image:alt', content: '' }
     ],
     link: [
