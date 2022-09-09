@@ -2,9 +2,9 @@
   <div class="layout-wrapper">
     <div class="text-wrapper contained page-margin">
       <h1 v-if="error.statusCode === 404">This page doesn't exist</h1>
-      <h1 v-else>An error occurred</h1>
+      <h1 v-else>An unknown error occurred</h1>
       <p>
-        View <nuxt-link to="/work">our work</nuxt-link> instead or
+        Go <nuxt-link to="/">back to the home page</nuxt-link>, or
         <nuxt-link to="/contact">say hi</nuxt-link>.
       </p>
     </div>

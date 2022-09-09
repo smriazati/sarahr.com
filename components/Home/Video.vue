@@ -20,6 +20,9 @@ export default {
       isPlaying: false,
     };
   },
+  mounted() {
+    this.$nextTick(this.toggleVid);
+  },
   methods: {
     toggleVid() {
       let vid = this.$refs.video;
@@ -41,6 +44,10 @@ export default {
 .video-wrapper {
   max-width: 100%;
   overflow: hidden;
+}
+
+.video-wrapper video {
+  max-width: 100%;
 }
 
 .video-wrapper button {

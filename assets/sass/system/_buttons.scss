@@ -2,16 +2,26 @@
     background: white;
     transition: .3s ease all;
     color: black;
+
     &:hover {
         color: white;
         background: black;
     }
 }
 
+@mixin btnPrimaryBig () {
+    @include btnPrimary;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+
+
 @mixin btnSecondary() {
     background: white;
     color: black;
     transition: .3s ease all;
+
     &:hover {
         background: white;
         color: black;

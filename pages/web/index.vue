@@ -6,9 +6,9 @@
     <section>
       <Modal />
       <h2 class="section-title">Recent projects</h2>
-      <ul v-if="items" class="web-grid">
-        <li v-for="item in items" :key="item.id" class="item">
-          <WebWorkItem :item="item" />
+      <ul v-if="items" class="card-list">
+        <li v-for="item in items" :key="item.id" class="card-item">
+          <WebItem :item="item" />
         </li>
       </ul>
     </section>
@@ -38,44 +38,4 @@ export default {
 </script>
 
 <style lang="scss">
-.page-intro {
-  border: 1px solid black;
-  max-width: 90ch;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-.section-title {
-  text-transform: none;
-  margin-bottom: 1rem;
-}
-.web-grid {
-  // padding-left: 1rem;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  li {
-    border: 1px solid black;
-    padding: 1rem;
-    margin: 1rem;
-    margin-left: 0;
-    background: rgb(223, 222, 222);
-    a,
-    button {
-      padding: 0;
-      display: flex;
-    }
-    &:not(:last-child) {
-      margin-bottom: 0.5rem;
-    }
-    .text-wrapper {
-      > *:not(:first-child) {
-        margin-top: 8px;
-      }
-      > .flex-row > *:not(:last-child) {
-        margin-right: 8px;
-      }
-    }
-  }
-}
 </style>

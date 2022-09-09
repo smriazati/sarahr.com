@@ -5,7 +5,9 @@
       <span v-else>Menu</span>
     </button>
     <div :class="isExpanded ? 'show' : 'hide'" class="collapse-area">
-      <h1><nuxt-link to="/">Sarah Riazati</nuxt-link></h1>
+      <h1 @click="toggleMenu()">
+        <nuxt-link to="/">Sarah Riazati</nuxt-link>
+      </h1>
       <nav>
         <ul ref="menu">
           <li>
@@ -53,6 +55,8 @@ export default {
   },
 };
 </script>
+
+
 <style lang="scss">
 $header-spacer: 1rem;
 $transition-menu-transform: 0.3s ease all;
@@ -79,7 +83,7 @@ header.site-header {
       transform: translateX(0vw);
     }
     &.hide {
-      transform: translateX(-50vw);
+      transform: translateX(-100vw);
     }
   }
 }
@@ -100,5 +104,9 @@ header.site-header {
       }
     }
   }
+}
+
+.nuxt-link-exact-active {
+  color: pink;
 }
 </style>

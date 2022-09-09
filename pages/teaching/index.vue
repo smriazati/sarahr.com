@@ -1,10 +1,17 @@
 <template>
-  <main class="contained">
-    <SiteComingSoon />
+  <main class="contained page-margin teaching">
+    <!-- <section class="page-intro">
+      <TeachingBio />
+    </section> -->
+    <ul class="card-list" v-if="items">
+      <li v-for="item in items" :key="item.id" class="card-item">
+        <TeachingItem :item="item" />
+      </li>
+    </ul>
   </main>
 </template>
     
-    <script>
+<script>
 export default {
   asyncData({ $axios }) {
     const tableID = "tblGLFq17tAZ1N1K8";
@@ -21,3 +28,10 @@ export default {
 };
 </script>
     
+<style lang="scss">
+.teaching {
+  .card-list li {
+    flex: 0 0 48%;
+  }
+}
+</style>

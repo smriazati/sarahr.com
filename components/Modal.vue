@@ -89,7 +89,11 @@ export default {
     }
   }
   .wrapper {
-    @include contained;
+    // @include contained;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
     position: relative;
     border: 1px solid black;
     background: rgba(228, 228, 228, 0.9);
@@ -103,16 +107,11 @@ export default {
 
     button {
       flex: 0 0 30px;
+      padding: 0.5rem;
     }
   }
-  .text-wrapper {
-    > *:not(:last-child) {
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      max-width: 50ch;
-    }
+  p {
+    max-width: 50ch;
   }
 }
 </style>

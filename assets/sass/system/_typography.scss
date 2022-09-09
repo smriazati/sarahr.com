@@ -45,6 +45,7 @@
     font-size: 24px;
     line-height: 32px;
 }
+
 @mixin smallTitleStyle() {
     text-transform: uppercase;
     font-weight: 400;
@@ -53,11 +54,14 @@
 }
 
 @mixin largeTextStyle() {
+    text-transform: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
 }
+
 @mixin textStyle() {
+    text-transform: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;

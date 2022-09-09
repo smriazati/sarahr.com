@@ -1,7 +1,7 @@
-@use 'system/_colors.scss'as *;
-@use 'system/_typography.scss'as *;
-@use 'system/_layout.scss'as *;
-@use 'system/_buttons.scss'as *;
+@use 'system/_colors.scss' as *;
+@use 'system/_typography.scss' as *;
+@use 'system/_layout.scss' as *;
+@use 'system/_buttons.scss' as *;
 
 /* resets  */
 
@@ -39,6 +39,18 @@ nav ul {
 /* colors  */
 
 /* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote {
+  @include pStyle();
+}
 
 h1,
 .h1 {
@@ -55,21 +67,6 @@ h3,
   @include h3Style();
 }
 
-h4,
-.h4 {
-  @include h4Style();
-}
-
-h5,
-.h5 {
-  @include h5Style();
-}
-
-h6,
-.h6 {
-  @include h3Style();
-}
-
 p,
 .p {
   @include pStyle();
@@ -78,12 +75,15 @@ p,
 .display-style {
   @include displayStyle;
 }
+
 .title-style {
   @include titleStyle;
 }
+
 .text-style {
   @include textStyle;
 }
+
 .large-text-style {
   @include largeTextStyle;
 }
@@ -133,13 +133,21 @@ p,
   &.center {
     justify-content: center;
   }
+
   &.space-between {
     justify-content: space-between;
   }
+
   &.flex-row-reverse {
     flex-direction: row-reverse;
   }
 }
+
+.align-center {
+  align-items: center;
+}
+
+
 
 .visually-hidden {
   display: none;
@@ -154,6 +162,7 @@ button {
   color: black;
   font-family: inherit;
   font-size: inherit;
+
   &:hover {
     cursor: pointer;
   }
@@ -167,6 +176,10 @@ button {
 
 .btn-primary {
   @include btnPrimary;
+}
+
+.btn-primary-big {
+  @include btnPrimaryBig;
 }
 
 
@@ -184,7 +197,9 @@ input {
   color: black;
   font-family: inherit;
   font-size: inherit;
+  width: 100%;
 }
+
 textarea {
   height: 6rem;
 }
@@ -194,10 +209,13 @@ textarea {
   width: 100%;
   max-width: 980px;
   height: 100%;
+
   div {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0;
+
     iframe {
       position: absolute;
       top: 0;
@@ -215,10 +233,90 @@ textarea {
 }
 
 form,
-.form-group + .form-group {
+.form-group+.form-group {
   margin-top: 1rem;
 }
 
-.ul-plain { 
+.ul-plain {
   list-style: none;
+}
+
+.pill {
+  background: pink;
+}
+
+.pill+.pill {
+  margin-left: 1ch;
+}
+
+.card-list {
+  // padding-left: 1rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  li {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: 0;
+    background: rgb(223, 222, 222);
+
+    a,
+    button {
+      padding: 0;
+      display: flex;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    .text-wrapper {
+      >*:not(:first-child) {
+        margin-top: 8px;
+      }
+
+      >.flex-row>*:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.page-intro {
+  width: auto;
+
+  margin-bottom: 2rem;
+  display: flex;
+
+  >.text-wrapper {
+    border: 1px solid black;
+    max-width: 90ch;
+    padding: 2rem;
+  }
+}
+
+.section-title {
+  text-transform: none;
+  margin-bottom: 1rem;
+}
+
+.text-wrapper {
+  >*:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  >div:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
 }

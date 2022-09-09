@@ -29,6 +29,7 @@
         graduate thesis film, monumental. She holds an MFA in Experimental and
         Documentary Art from Duke University.
       </p>
+      <p>Get in touch: sarahriazati@gmail.com</p>
       <ContactFormNetlify
         :email="true"
         :name="true"
