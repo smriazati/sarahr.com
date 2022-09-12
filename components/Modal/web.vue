@@ -35,6 +35,13 @@
           </ul>
         </div>
         <p class="large-text-style">{{ item.fields.role }}</p>
+        <div v-if="item.fields.otherlove">
+          <p>
+            <a href="https://otherlove.co" target="_blank" class="pill"
+              >Made with Otherlove</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
