@@ -92,14 +92,17 @@ header.site-header {
   li {
     @include h2Style();
   }
+  h1 {
+    padding-top: 1rem;
+  }
   nav {
     ul {
-      margin-top: 1rem;
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
       > * {
         &:not(:last-child) {
-          margin-bottom: 0.5rem;
+          margin-bottom: 1rem;
         }
       }
     }
