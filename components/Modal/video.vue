@@ -8,7 +8,11 @@
         {{ item.fields.Description }}
       </p>
     </div>
-    <div v-if="item.fields.embed" class="embed-wrapper">
+    <div
+      v-if="item.fields.embed"
+      class="embed-wrapper"
+      :class="item.fields.nonResponsiveEmbed ? 'not-responsive-embed' : ''"
+    >
       <div v-html="item.fields.embed"></div>
     </div>
   </div>

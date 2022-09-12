@@ -19,12 +19,20 @@
         </nuxt-link>
       </div>
     </div>
+    <div class="back-to-top">
+      <button class="btn-primary" @click="backToTop()">
+        <span>&#8593; Back to top</span>
+      </button>
+    </div>
   </main>
 </template>
   
 
 <script>
+import commonMixin from "~/mixins/docPages.js";
+
 export default {
+  mixins: [commonMixin],
   data() {
     return {
       projects: [

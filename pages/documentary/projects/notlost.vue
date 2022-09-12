@@ -24,12 +24,12 @@
           </p>
         </div>
       </div>
-
+      <!-- 
       <div class="back-to-top">
         <button class="btn-primary" @click="backToTop()">
           <span>&#8593; Back to top</span>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

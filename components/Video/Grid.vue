@@ -78,7 +78,8 @@ $bg-overlay-color: rgba(50, 48, 57, 0.5);
         min-height: 100%;
         min-width: 100%;
         object-fit: cover;
-        object-position: 50% 50%;
+        object-position: 40% 50%;
+
         transition: $transition-image-hover-transform;
         filter: grayscale(1) blur(3px);
       }
@@ -92,7 +93,7 @@ $bg-overlay-color: rgba(50, 48, 57, 0.5);
         background: rgba(0, 0, 0, 0);
       }
       .image-wrapper img {
-        object-position: 20% 50%;
+        object-position: 50% 50%;
         filter: grayscale(0) blur(0px);
       }
     }

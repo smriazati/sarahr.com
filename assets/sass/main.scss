@@ -208,7 +208,7 @@ textarea {
   height: 6rem;
 }
 
-.embed-wrapper {
+.embed-wrapper:not(.not-responsive-embed) {
   position: relative;
   width: 100%;
   max-width: 980px;
@@ -323,4 +323,12 @@ form,
 
 .mb-8 {
   margin-bottom: 8px;
+}
+
+.documentary-project-page {
+  .text-wrapper {
+    p {
+      max-width: 50ch;
+    }
+  }
 }
