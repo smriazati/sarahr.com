@@ -7,7 +7,7 @@
     </section>
     <div class="doc-grid">
       <div v-for="(item, index) in projects" :key="index" class="grid-item">
-        <nuxt-link :to="`/documentary/${item.slug}`">
+        <nuxt-link :to="`/documentary/projects/${item.slug}`">
           <div class="image-wrapper mb-8">
             <figure v-if="item.img">
               <img :src="item.img" :alt="item.img_alt" />
@@ -40,6 +40,20 @@ export default {
           img: "/images/notlost/featured.jpg",
           img_alt: "close up of a hand about to light itself on fire",
         },
+        {
+          title: "A Stench in the Nostrils of God",
+          slug: "hogs",
+          img: "/images/hogs/featured.jpg",
+          img_alt:
+            "gloomy moody landscape photo of a rural water tour that says Duplin County",
+        },
+        {
+          title: "Italian Circus",
+          slug: "circus",
+          img: "/images/italiancircus/featured.jpg",
+          img_alt:
+            "a young male circus performer in his trailer, next to his circus costume",
+        },
       ],
     };
   },
@@ -51,6 +65,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: auto;
+  grid-row-gap: 30px;
   > *:first-child {
     grid-column: 1 / span 8;
     grid-row: 1 / 2;
@@ -58,6 +73,14 @@ export default {
   > *:nth-child(2) {
     grid-column: 5 / span 6;
     grid-row: 2 / 3;
+  }
+  > *:nth-child(3) {
+    grid-column: 1 / span 4;
+    grid-row: 3 / 4;
+  }
+  > *:nth-child(4) {
+    grid-column: 5 / span 6;
+    grid-row: 4 / 5;
   }
 }
 </style>

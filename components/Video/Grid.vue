@@ -28,11 +28,20 @@ $transition-image-hover-transform: 0.8s ease all;
 $transition-image-hover-bg: 0.5s ease all;
 $bg-overlay-color: rgba(50, 48, 57, 0.5);
 .video-grid {
+  background: #000;
   display: grid;
   max-width: 100vw;
   overflow: hidden;
   grid-template-columns: repeat(3, 33vw);
   grid-auto-rows: 33vw;
+  @media (min-width: 600px) and (max-width: $collapse-bp) {
+    grid-template-columns: repeat(2, 50vw);
+    grid-auto-rows: 50vw;
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
   grid-gap: 1px;
   .video-grid-item {
     @include stackedDivs;
