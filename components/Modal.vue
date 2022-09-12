@@ -1,8 +1,8 @@
 <template>
-  <div :class="activeModal ? 'show' : 'hide'" class="modal">
+  <div :class="activeModal ? 'show' : 'hide'" class="modal" ref="top">
     <div class="close-overlay" @click="closeModal()"></div>
     <div class="wrapper" v-if="activeModal">
-      <div class="flex-row flex-row-reverse space-between">
+      <div class="flex-col">
         <button class="btn-plain flex-row" @click="closeModal()">
           <span class="visually-hidden">Close</span>
           <span class="icon icon-close"
@@ -41,7 +41,32 @@ export default {
       activeModal: (state) => state.activeModal,
     }),
   },
+  data() {
+    return {
+      prevScrollY: 0,
+    };
+  },
+  watch: {
+    activeModal() {
+      if (this.activeModal) {
+        this.scrollToModal();
+      } else {
+        this.scrollToPrev();
+      }
+    },
+  },
   methods: {
+    scrollToModal() {
+      this.prevScrollY =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      // console.log(this.prevScrollY);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    },
+    scrollToPrev() {
+      document.body.scrollTop = this.prevScrollY;
+      document.documentElement.scrollTop = this.prevScrollY;
+    },
     addEventListeners() {
       document.onkeydown = (evt) => {
         evt = evt || window.event;
@@ -65,23 +90,20 @@ export default {
   
 <style lang="scss">
 .modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 399;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   // color: white;
   &.hide {
     display: none;
   }
 
   .close-overlay {
-    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
     width: 100%;
     height: 100%;
     &:hover {
@@ -94,9 +116,13 @@ export default {
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
+    // width: 980px;
+    // @media (max-width: 980px) {
+    //   width: auto;
+    // }
     position: relative;
     border: 1px solid black;
-    background: rgba(228, 228, 228, 0.9);
+    background: #fff;
     border: 1px solid white;
     padding: 1rem;
     display: flex;
@@ -108,6 +134,14 @@ export default {
     button {
       flex: 0 0 30px;
       padding: 0.5rem;
+      align-self: flex-end;
+    }
+
+    .embed-wrapper {
+      width: 1280px;
+      @media (max-width: 1280px) {
+        width: auto;
+      }
     }
   }
   p {

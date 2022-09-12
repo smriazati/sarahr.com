@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-wrapper">
+    <div class="text-wrapper mb-24">
       <h2 v-if="item.fields.Name">
         {{ item.fields.Name }}
       </h2>
