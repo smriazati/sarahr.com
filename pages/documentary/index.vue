@@ -39,8 +39,17 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "description",
           content: "Documentary projects exploring histories and landscapes.",
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: this.projects[0].img,
+        },
+        {
+          hid: "og:image:alt",
+          name: "og:image:alt",
+          content: this.projects[0].img_alt,
         },
       ],
     };

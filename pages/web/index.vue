@@ -24,7 +24,6 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "description",
           content: "Front-end web development and UX design portfolio.",
         },
       ],

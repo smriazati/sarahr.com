@@ -18,9 +18,13 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "description",
           content:
             "Portfolio of branded content, behind-the-scenes videos and motion graphics.",
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: this.items[0].fields.Thumbnail[0].thumbnails.large.url,
         },
       ],
     };
