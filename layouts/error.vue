@@ -5,7 +5,7 @@
       <h1 v-else>An unknown error occurred</h1>
       <p>
         Go <nuxt-link to="/">back to the home page</nuxt-link>, or
-        <nuxt-link to="/contact">say hi</nuxt-link>.
+        <nuxt-link to="/about">say hi</nuxt-link>.
       </p>
     </div>
   </div>

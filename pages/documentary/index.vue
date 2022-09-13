@@ -32,6 +32,11 @@
 import commonMixin from "~/mixins/docPages.js";
 
 export default {
+  head() {
+    return {
+      description: "Documentary projects exploring histories and landscapes.",
+    };
+  },
   mixins: [commonMixin],
   data() {
     return {

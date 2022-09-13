@@ -13,6 +13,12 @@
     
 <script>
 export default {
+  head() {
+    return {
+      description:
+        "College courses in creative production topics, like video production, creative coding and motion graphics.",
+    };
+  },
   asyncData({ $axios }) {
     const tableID = "tblGLFq17tAZ1N1K8";
     return $axios

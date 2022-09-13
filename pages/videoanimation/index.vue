@@ -11,6 +11,12 @@
   
   <script>
 export default {
+  head() {
+    return {
+      description:
+        "Portfolio of branded videos, behind-the-scenes videos and motion graphics.",
+    };
+  },
   asyncData({ $axios }) {
     const tableID = "tblfxfdvDX7gMJJG8";
     return $axios
