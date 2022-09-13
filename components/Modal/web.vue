@@ -17,6 +17,11 @@
           ><span>View site</span></a
         >
       </div>
+      <div v-if="item.fields.github">
+        <a :href="item.fields.github" target="_blank" class="btn-primary-big"
+          ><span>Github</span></a
+        >
+      </div>
       <div v-if="item.fields.brief">
         <h3 class="title-style">The Brief</h3>
         <p class="large-text-style">{{ item.fields.brief }}</p>
