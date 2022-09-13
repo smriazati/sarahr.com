@@ -13,8 +13,16 @@
 export default {
   head() {
     return {
-      description:
-        "Portfolio of branded videos, behind-the-scenes videos and motion graphics.",
+      title: "Commercial Video & Animation",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "description",
+          content:
+            "Portfolio of branded content, behind-the-scenes videos and motion graphics.",
+        },
+      ],
     };
   },
   asyncData({ $axios }) {

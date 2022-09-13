@@ -20,7 +20,14 @@ export default {
   head() {
     return {
       title: "Web Development & UX Design",
-      description: "Front-end web development and UX design portfolio.",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "description",
+          content: "Front-end web development and UX design portfolio.",
+        },
+      ],
     };
   },
   asyncData({ $axios }) {
